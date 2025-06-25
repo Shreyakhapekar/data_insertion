@@ -1,0 +1,16 @@
+#CODE FOR INSERTION AMD DELETION
+INSERT INTO Authors (AuthorID, Name)
+VALUES (1, 'J.K. Rowling');
+
+INSERT INTO Books (BookID, Title, AuthorID)
+VALUES (101, 'Harry Potter', 1);
+
+INSERT INTO Members (MemberID, Name, Email)
+VALUES (201, 'Anjali', NULL);
+INSERT INTO Transactions (TransactionID, MemberID, BookID)
+VALUES (501, 201, 101);
+UPDATE Books
+SET Title = 'Harry Potter and the Philosopher\'s Stone'
+WHERE BookID = 101;
+DELETE FROM Transactions
+WHERE TransactionID = 501;
